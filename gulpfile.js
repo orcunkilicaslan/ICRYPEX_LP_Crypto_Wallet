@@ -22,20 +22,25 @@ const   gulp                      = require('gulp'),
 
 /* LANDINGPAGE START */
 gulp.task('sass-core', () => {
-  return gulp.src([
-      folder_src_main + 'scss/core/**/core.scss'
-  ])
-    .pipe(sourcemaps.init())
-      .pipe(plumber())
-      .pipe(sass())
-      .pipe(autoprefixer({
-          flexbox: 'no-2009'
-      }))
-      .pipe(cssnano())
-      .pipe(concat('core.min.css'))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(folder_dist_main + 'css'))
-    .pipe(browserSync.stream());
+    return gulp.src([
+        folder_src_main + 'scss/core/**/core.scss'
+    ])
+        .pipe(sourcemaps.init())
+        .pipe(plumber())
+        .pipe(sass())
+        .pipe(autoprefixer({
+            flexbox: 'no-2009'
+        }))
+        .pipe(cssnano({
+            reduceIdents: false,
+            discardComments: {
+                removeAll: true
+            }
+        }))
+        .pipe(concat('core.min.css'))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(folder_dist_main + 'css'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('script-core', () => {
