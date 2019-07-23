@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33.955" height="33.955" viewBox="0 0 33.955 33.955">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #65686d;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.2px;
+        fill-rule: evenodd;
+        opacity: 0.9;
+      }
+    </style>
+  </defs>
+  <g id="Eos_Icon" transform="translate(0 0)">
+    <path id="Ellipse" class="cls-1" d="M16.978,0A16.978,16.978,0,1,1,0,16.978,16.978,16.978,0,0,1,16.978,0Z" transform="translate(0)"/>
+    <path id="Path" class="cls-2" d="M10.9,11.655l5.147,16.159L8.412,23.03,10.9,11.655l5.147-7.031V9.555L8.412,23.03h15.28L16.055,9.555V4.624L21.2,11.655,23.692,23.03l-7.636,4.784,1.619-5.084L21.2,11.655" transform="translate(0.854 0.622)"/>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.5" height="17.561" viewBox="0 0 16.5 17.561">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 1.5px;
+        opacity: 0.3;
+      }
+    </style>
+  </defs>
+  <path id="Chat_Icon" class="cls-1" d="M1.25,0h12.5A1.25,1.25,0,0,1,15,1.25V10a1.25,1.25,0,0,1-1.25,1.25H7.5L3.75,15V11.25H1.25A1.25,1.25,0,0,1,0,10V1.25A1.25,1.25,0,0,1,1.25,0Z" transform="translate(0.75 0.75)"/>
+</svg>
