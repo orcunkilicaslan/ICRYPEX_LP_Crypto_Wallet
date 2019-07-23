@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:#fff}.cls-1{opacity:.2}.cls-2{fill:#afafaf}.cls-3{fill-rule:evenodd}
+        </style>
+    </defs>
+    <g id="Icon_Ltc" transform="translate(-275 -263)">
+        <circle id="Ellipse" cx="19.5" cy="19.5" r="19.5" class="cls-1" transform="translate(275 263)"/>
+        <circle id="Ellipse-2" cx="17.5" cy="17.5" r="17.5" class="cls-2" data-name="Ellipse" transform="translate(277 265)"/>
+        <path id="Path" d="M10.665 21.083L9 21.729l.8-3.219 1.685-.677L13.915 8H19.9l-1.772 7.229 1.645-.666-.793 3.208-1.665.666-.991 4.063h9.009l-1.018 4.166H9.294z" class="cls-3" transform="translate(277.333 265.167)"/>
+    </g>
+</svg>

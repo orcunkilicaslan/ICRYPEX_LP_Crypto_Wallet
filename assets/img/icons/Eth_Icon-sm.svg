@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+    <defs>
+        <style>
+            .cls-1,.cls-4{fill:#fff}.cls-1{opacity:.2}.cls-2{fill:#627eea}.cls-3{fill:rgba(255,255,255,.6)}.cls-5{fill:rgba(255,255,255,.2)}
+        </style>
+    </defs>
+    <g id="Icon_Eth" transform="translate(-324 -251)">
+        <circle id="Ellipse" cx="19.5" cy="19.5" r="19.5" class="cls-1" transform="translate(324 251)"/>
+        <circle id="Ellipse-2" cx="17.5" cy="17.5" r="17.5" class="cls-2" data-name="Ellipse" transform="translate(326 253)"/>
+        <path id="Path" d="M16.5 4v9.7l8.2 3.664z" class="cls-3" transform="translate(326.847 253.375)"/>
+        <path id="Path-2" d="M17.2 4L9 17.366l8.2-3.666z" class="cls-4" data-name="Path" transform="translate(326.144 253.375)"/>
+        <path id="Path-3" d="M16.5 22.376v6.592l8.2-11.352z" class="cls-3" data-name="Path" transform="translate(326.847 254.652)"/>
+        <path id="Path-4" d="M17.2 28.968v-6.593L9 17.616z" class="cls-4" data-name="Path" transform="translate(326.144 254.652)"/>
+        <path id="Path-5" d="M16.5 21.295l8.2-4.761-8.2-3.662z" class="cls-5" data-name="Path" transform="translate(326.847 254.207)"/>
+        <path id="Path-6" d="M9 16.534l8.2 4.761v-8.423z" class="cls-3" data-name="Path" transform="translate(326.144 254.207)"/>
+    </g>
+</svg>
