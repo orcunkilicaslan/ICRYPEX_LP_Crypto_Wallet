@@ -2,10 +2,10 @@
 // = IMPORT
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500&display=swap&subset=latin-ext');
 @import "css3-mixins";
-@import "../../../../node_modules/animate.css/animate";
+@import "animate";
 @import "../bootstrap/bootstrap";
 @import "reset";
-@import "../../../../node_modules/owl.carousel/dist/assets/owl.carousel";
+@import "owl.carousel";
 @import "reset";
 
 $mainImgPath : "../../img";
