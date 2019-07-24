@@ -744,6 +744,17 @@ footer{
 				}
 			}
 		}
+		.inputerrormessage{
+			display: none;
+			position: absolute;
+			top: 2px;
+			right: 0;
+			color: $red;
+			font-size: 17px;
+			line-height: 1;
+			text-transform: uppercase;
+			z-index: 0;
+		}
 	}
 	.btn{
 		border-top-right-radius: 3px;

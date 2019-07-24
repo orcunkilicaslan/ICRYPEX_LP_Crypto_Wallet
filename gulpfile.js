@@ -45,7 +45,8 @@ gulp.task('sass-core', () => {
 
 gulp.task('script-core', () => {
     return gulp.src([
-        folder_src_main + 'script/core/**/core.js'
+        folder_src_main + 'script/core/**/core.js',
+        folder_src_main + 'script/core/**/validations-homepage-register.js'
     ])
         .pipe(plumber())
         .pipe(webpack({
