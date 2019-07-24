@@ -28,23 +28,23 @@
 </section>
 <section class="container-fluid form-wrapper">
 	<div class="container">
-		<form action="" autocomplete="off" novalidate>
+		<form action="" onsubmit="" autocomplete="off" novalidate>
 		<h2 class="font-weight-normal">DİJİTAL PARA DÜNYASINDA <b>GERÇEK KRİPTO CÜZDANA</b> SAHİP OLUN!</h2>
 		<div class="d-flex inputs justify-content-center mt-2 mx-auto flex-column flex-lg-row">
 			<div id="iconFirstNameId" class="">
-				<input type="text" class="form-control" placeholder="İSİM" name="firstname" id="inputFirstNameId" required>
+				<input type="text" class="form-control" placeholder="İSİM" name="firstname" id="inputFirstNameId" required onkeyup="lpregisterform.verifyContent('inputFirstNameProcess','inputFirstNameId','msgFirstNameId','iconFirstNameId')" onfocusout="lpregisterform.verifyContentErrorDelete('inputFirstNameProcess','inputFirstNameId','msgFirstNameId','iconFirstNameId')">
 				<span class="inputerrormessage" id="msgFirstNameId"></span>
 			</div>
 			<div id="iconLastNameId" class="">
-				<input type="text" class="form-control" placeholder="SOYİSİM" name="lastname" id="inputLastNameId" required>
+				<input type="text" class="form-control" placeholder="SOYİSİM" name="lastname" id="inputLastNameId" required onkeyup="lpregisterform.verifyContent('inputLastNameProcess','inputLastNameId','msgLastNameId','iconLastNameId')" onfocusout="lpregisterform.verifyContentErrorDelete('inputLastNameProcess','inputLastNameId','msgLastNameId','iconLastNameId')">
 				<span class="inputerrormessage" id="msgLastNameId"></span>
 			</div>
 			<div id="iconPhoneId" class="">
-				<input type="text" class="form-control inputphonemask" placeholder="TELEFON" name="phone" id="inputPhoneId" required>
+				<input type="text" class="form-control inputphonemask" placeholder="TELEFON" name="phone" id="inputPhoneId" required onkeyup="lpregisterform.verifyContent('inputPhoneProcess','inputPhoneId','msgPhoneId','iconPhoneId')" onfocusout="lpregisterform.verifyContentErrorDelete('inputPhoneProcess','inputPhoneId','msgPhoneId','iconPhoneId')">
 				<span class="inputerrormessage" id="msgPhoneId"></span>
 			</div>
 			<div id="iconEmailId" class="">
-				<input type="text" class="form-control" placeholder="E-POSTA" name="email" id="inputEmailId" required>
+				<input type="text" class="form-control" placeholder="E-POSTA" name="email" id="inputEmailId" required onkeyup="lpregisterform.verifyContent('inputEmailProcess','inputEmailId','msgEmailId','iconEmailId')" onfocusout="lpregisterform.verifyContentErrorDelete('inputEmailProcess','inputEmailId','msgEmailId','iconEmailId')">
 				<span class="inputerrormessage" id="msgEmailId"></span>
 			</div>
 		</div>
@@ -56,17 +56,17 @@
 					</div>
 					<span>Ben rabot değilim</span>
 				</div>
-				
 			</div>
 			<div class="checkboxline ml-lg-4 ml-0 mt-2 mt-lg-0">
-				<div class="squaredFour">
-					<input type="checkbox" value="None" id="check1" name="check" checked />
-					<label for="check1"><span><a href="https://www.icrypex.com/company/legal/terms" target="_blank"><u>Kullanım Sözleşmesini</u></a>&nbsp;okudum, onaylıyorum.</span></label>
+				<div id="iconUseTermCheckId" class="squaredFour">
+					<input type="checkbox" value="None" id="termsOfUseCheck" name="check" />
+					<label for="termsOfUseCheck"><span><a href="https://www.icrypex.com/company/legal/terms" target="_blank"><u>Kullanım Sözleşmesini</u></a>&nbsp;okudum, onaylıyorum.</span></label>
+					<span class="inputerrormessage" id="msgUseTermCheckId"></span>
 				</div>
 			</div>
 			<div class="checkboxline ml-lg-4 ml-0 mt-2 mt-lg-0">
 				<div class="squaredFour">
-					<input type="checkbox" value="None" id="check2" name="check" checked />
+					<input type="checkbox" value="None" id="check2" name="check" />
 					<label for="check2"><span>Gelişmelerden ve duyurulardan haberdar olmak istiyorum.</span></label>
 				</div>
 			</div>

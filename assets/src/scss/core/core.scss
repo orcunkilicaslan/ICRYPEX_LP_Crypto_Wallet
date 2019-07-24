@@ -745,12 +745,11 @@ footer{
 			}
 		}
 		.inputerrormessage{
-			display: none;
 			position: absolute;
-			top: 2px;
-			right: 0;
+			top: 17px;
+			right: 28px;
 			color: $red;
-			font-size: 17px;
+			font-size: 13px;
 			line-height: 1;
 			text-transform: uppercase;
 			z-index: 0;
