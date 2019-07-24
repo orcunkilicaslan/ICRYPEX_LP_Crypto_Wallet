@@ -657,6 +657,9 @@ footer{
 			.d-lg-none{
 				display: none !important;
 			}
+			.inputerrormessage{
+				top: 12px !important;
+			}
 		}
 	}
 	@media screen and(max-width:$screenmd){
@@ -883,7 +886,7 @@ footer{
 			.chart{
 				position:relative;
 				padding-top:10px;
-				border-bottom:1px solid rgba(#758ca3, .35);
+				//border-bottom:1px solid rgba(#758ca3, .35);
 				@include flexbox();
 			    flex-direction: column;
 			    @include justify-content(center);
