@@ -451,3 +451,46 @@
       -ms-flex-flow: $flow;
           flex-flow: $flow;
 }
+
+// Xtras
+@mixin xtras-border-radius($radius) {
+  border-radius: $radius;
+  -o-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -khtml-border-radius: $radius;
+}
+
+@mixin xtras-border-radii($topleft, $topright, $bottomright, $bottomleft) {
+  border-top-left-radius: $topleft;
+  border-top-right-radius: $topright;
+  border-bottom-right-radius: $bottomright;
+  border-bottom-left-radius: $bottomleft;
+  -webkit-border-top-left-radius: $topleft;
+  -webkit-border-top-right-radius: $topright;
+  -webkit-border-bottom-right-radius: $bottomright;
+  -webkit-border-bottom-left-radius: $bottomleft;
+  -moz-border-radius-topleft: $topleft;
+  -moz-border-radius-topright: $topright;
+  -moz-border-radius-bottomright: $bottomright;
+  -moz-border-radius-bottomleft: $bottomleft;
+}
+
+@mixin xtras-transition($property, $duration, $easing: linear) {
+  transition: $property $duration $easing;
+  -o-transition: $property $duration $easing;
+  -ms-transition: $property $duration $easing;
+  -moz-transition: $property $duration $easing;
+  -webkit-transition: $property $duration $easing;
+  -khtml-transition: $property $duration $easing;
+}
+
+@mixin xtras-rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin xtras-scale($scale) {
+  @include transform(scale($scale));
+}
+// Extras
