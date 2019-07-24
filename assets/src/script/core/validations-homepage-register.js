@@ -2,16 +2,18 @@
 const translateObject = {
 
     'tr': {
-        'HomepageRegisterFirstNameAlert':'EN AZ 2 KARAKTER',
-        'HomepageRegisterLastNameAlert':'EN AZ 2 KARAKTER',
-        'HomepageRegisterPhoneAlert':'HATALI TELEFON',
-        'HomepageRegisterEmailAlert':'HATALI E-POSTA',
+        'LPRegisterFirstNameAlert':'EN AZ 2 KARAKTER',
+        'LPRegisterLastNameAlert':'EN AZ 2 KARAKTER',
+        'LPRegisterPhoneAlert':'HATALI TELEFON',
+        'LPRegisterEmailAlert':'HATALI E-POSTA',
+        'LPRegisterUseTermCheck':'İŞARETLE'
     },
     'en':{
-        'HomepageRegisterFirstNameAlert':'EN AZ 2 KARAKTER',
-        'HomepageRegisterLastNameAlert':'EN AZ 2 KARAKTER',
-        'HomepageRegisterPhoneAlert':'HATALI TELEFON',
-        'HomepageRegisterEmailAlert':'HATALI E-POSTA',
+        'LPRegisterFirstNameAlert':'EN AZ 2 KARAKTER',
+        'LPRegisterLastNameAlert':'EN AZ 2 KARAKTER',
+        'LPRegisterPhoneAlert':'HATALI TELEFON',
+        'LPRegisterEmailAlert':'HATALI E-POSTA',
+        'LPRegisterUseTermCheck':'İŞARETLE'
     }
 };
 
@@ -29,26 +31,53 @@ class Translation {
 }
 /* Translation */
 
-/* Homepage Register Form */
-class HomepageRegisterForm {
+/* LP Register Form */
+class LPRegisterForm {
 
     constructor(){}
 
-    sendHomepageRegisterForm(){
+    sendLPRegisterForm(){
         let FirstName = document.getElementById("inputFirstNameId").value;
         let LastName = document.getElementById("inputLastNameId").value;
         let Phone = document.getElementById("inputPhoneId").value;
         let Email = document.getElementById("inputEmailId").value;
         let termsOfUseCheck = document.getElementById("termsOfUseCheck").checked;
+
         let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+
+
+        if(FirstName.trim().length < 2){
+            this.setLPRegisterFormErrorMessages("msgFirstNameId", Translation.translate('tr','HomepageRegisterFirstNameAlert'));
+            this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
+        }
+        if(LastName.trim().length < 2){
+            this.setLPRegisterFormErrorMessages("msgLastNameId", Translation.translate('tr','HomepageRegisterLastNameAlert'));
+            this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
+        }
+        if(Phone.trim().length < 14){
+            this.setLPRegisterFormErrorMessages("msgPhoneId", Translation.translate('tr','HomepageRegisterPhoneAlert'));
+            this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
+        }
+        if(!emailPattern.test(Email)){
+            this.setLPRegisterFormErrorMessages("msgEmailId", Translation.translate('tr','HomepageRegisterEmailAlert'));
+            this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
+        }
+        if(!termsOfUseCheck){
+            document.getElementById('labeltermsOfUseCheck').classList.add("checkederror");
+        }
     }
 
-    setHomepageRegisterFormErrorMessages(inputIdSelector, inputErrorMessage, inputIconCheck){
+    setLPRegisterFormErrorMessages(inputIdSelector, inputErrorMessage){
         let ErrorMessageText = document.getElementById(inputIdSelector);
-        let ErrorIconCheck = document.getElementById(messageIconSelector);
         ErrorMessageText.innerHTML = inputErrorMessage;
-        ErrorIconCheck.addClass = inputIconCheck;
-        //ErrorMessageText.classList.add(inputIconCheck);
+    }
+    setLPRegisterFormErrorInput(inputIdSelector){
+        let ErrorInputClass = document.getElementById(inputIdSelector);
+    }
+    setLPRegisterFormErrorIcon(inputIdSelector, inputAddErrorIcon, inputRemoveErrorIcon){
+        let ErrorIconClass = document.getElementById(inputIdSelector);
+        ErrorIconClass.classList.add(inputAddErrorIcon);
+        ErrorIconClass.classList.remove(inputRemoveErrorIcon);
     }
 
     verifyContent(inputProcessName, inputIdSelector, messageSpanSelector, messageIconSelector){
@@ -62,46 +91,55 @@ class HomepageRegisterForm {
         let messageIconSelectorTag = document.getElementById(messageIconSelector);
 
         let val = inputSelectorTag.value.trim();
+        let checkbox = inputSelectorTag;
 
         switch (inputProcessName) {
 
             case "inputFirstNameProcess":
                 if(val.length < 2){
-                    this.setHomepageRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','HomepageRegisterFirstNameAlert'), "");
-                    this.setHomepageRegisterFormErrorMessages(messageIconSelector,"", "error");
+                    this.setLPRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','LPRegisterFirstNameAlert'));
+                    this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
+                    this.setLPRegisterFormErrorInput(inputIdSelector);
                 }else{
-                    this.setHomepageRegisterFormErrorMessages(messageSpanSelector,"", "");
-                    this.setHomepageRegisterFormErrorMessages(messageIconSelector,"", "check");
+                    this.setLPRegisterFormErrorMessages(messageSpanSelector,"");
+                    this.setLPRegisterFormErrorIcon(messageIconSelector,"check", "error");
+                    this.setLPRegisterFormErrorInput(inputIdSelector);
                 }
                 break;
 
             case "inputLastNameProcess":
                 if(val.length < 2){
-                    this.setHomepageRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','HomepageRegisterLastNameAlert'), "");
-                    this.setHomepageRegisterFormErrorMessages(messageIconSelector,"", "error");
+                    this.setLPRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','LPRegisterLastNameAlert'));
+                    this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
+                    this.setLPRegisterFormErrorInput(inputIdSelector);
                 }else{
-                    this.setHomepageRegisterFormErrorMessages(messageSpanSelector,"", "");
-                    this.setHomepageRegisterFormErrorMessages(messageIconSelector,"", "check");
+                    this.setLPRegisterFormErrorMessages(messageSpanSelector,"");
+                    this.setLPRegisterFormErrorIcon(messageIconSelector,"check", "error");
+                    this.setLPRegisterFormErrorInput(inputIdSelector);
                 }
                 break;
 
             case "inputPhoneProcess":
                 if(val.length < 14){
-                    this.setHomepageRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','HomepageRegisterPhoneAlert'), "");
-                    this.setHomepageRegisterFormErrorMessages(messageIconSelector,"", "error");
+                    this.setLPRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','LPRegisterPhoneAlert'));
+                    this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
+                    this.setLPRegisterFormErrorInput(inputIdSelector);
                 }else{
-                    this.setHomepageRegisterFormErrorMessages(messageSpanSelector,"", "");
-                    this.setHomepageRegisterFormErrorMessages(messageIconSelector,"", "check");
+                    this.setLPRegisterFormErrorMessages(messageSpanSelector,"");
+                    this.setLPRegisterFormErrorIcon(messageIconSelector,"check", "error");
+                    this.setLPRegisterFormErrorInput(inputIdSelector);
                 }
                 break;
 
             case "inputEmailProcess":
                 if(!emailPattern.test(val)){
-                    this.setHomepageRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','HomepageRegisterEmailAlert'), "");
-                    this.setHomepageRegisterFormErrorMessages(messageIconSelector,"", "error");
+                    this.setLPRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','LPRegisterEmailAlert'));
+                    this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
+                    this.setLPRegisterFormErrorInput(inputIdSelector);
                 }else{
-                    this.setHomepageRegisterFormErrorMessages(messageSpanSelector,"", "");
-                    this.setHomepageRegisterFormErrorMessages(messageIconSelector,"", "check");
+                    this.setLPRegisterFormErrorMessages(messageSpanSelector,"");
+                    this.setLPRegisterFormErrorIcon(messageIconSelector,"check", "error");
+                    this.setLPRegisterFormErrorInput(inputIdSelector);
                 }
                 break;
         }
@@ -113,43 +151,48 @@ class HomepageRegisterForm {
         let messageSpanSelectorTag = document.getElementById(messageSpanSelector);
         let messageIconSelectorTag = document.getElementById(messageIconSelector);
         let val = inputSelectorTag.value.trim();
+        let checkbox = inputSelectorTag;
 
         switch (inputProcessName) {
 
             case "inputFirstNameProcess":
                 if(val.length===0){
-                    this.setHomepageRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','HomepageRegisterFirstNameAlert'), "");
-                    this.setHomepageRegisterFormErrorMessages(messageIconSelector,"", "check");
+                    this.setLPRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','LPRegisterFirstNameAlert'));
+                    this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
+                    this.setLPRegisterFormErrorInput(inputIdSelector);
                 }
                 break;
 
             case "inputLastNameProcess":
                 if(val.length===0){
-                    this.setHomepageRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','HomepageRegisterLastNameAlert'), "");
-                    this.setHomepageRegisterFormErrorMessages(messageIconSelector,"", "check");
+                    this.setLPRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','LPRegisterLastNameAlert'));
+                    this.setLPRegisterFormErrorIcon(messageIconSelector,"error","check");
+                    this.setLPRegisterFormErrorInput(inputIdSelector);
                 }
                 break;
 
             case "inputPhoneProcess":
                 if(val.length===0){
-                    this.setHomepageRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','HomepageRegisterPhoneAlert'), "");
-                    this.setHomepageRegisterFormErrorMessages(messageIconSelector,"", "check");
+                    this.setLPRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','LPRegisterPhoneAlert'));
+                    this.setLPRegisterFormErrorIcon(messageIconSelector,"error","check");
+                    this.setLPRegisterFormErrorInput(inputIdSelector);
                 }
                 break;
 
             case "inputEmailProcess":
                 if(val.length===0){
-                    this.setHomepageRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','HomepageRegisterEmailAlert'), "");
-                    this.setHomepageRegisterFormErrorMessages(messageIconSelector,"", "check");
+                    this.setLPRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','LPRegisterEmailAlert'));
+                    this.setLPRegisterFormErrorIcon(messageIconSelector,"error","check");
+                    this.setLPRegisterFormErrorInput(inputIdSelector);
                 }
                 break;
         }
     }
 }
 
-window.homepageregisterform = new HomepageRegisterForm();
-/* Homepage Register Form */
+window.lpregisterform = new LPRegisterForm();
+/* LP Register Form */
 
 /* Loading Info */
-console.log("Mainpage App Homepage Register Form Validations Javascript Loading Successful");
+// console.log("LP Register Form Validations Javascript Loading Successful");
 /* Loading Info */

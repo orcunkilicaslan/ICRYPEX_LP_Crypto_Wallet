@@ -6,5 +6,5 @@ jQuery(function($){
 /* Input Mask */
 
 /* Loading Info */
-//console.log("App Javascript Loading Successful");
+// console.log("App Javascript Loading Successful");
 /* Loading Info */
