@@ -308,6 +308,15 @@ input[type="text"], select[name="select"], textarea{
 			&:hover::after {
 				opacity: 0.5;
 			}
+			&.error{
+				color: lighten($red, 15%);
+				a{
+					color: lighten($red, 15%);
+				}
+				&:before{
+					border: 2px solid lighten($red, 15%);
+				}
+			}
 		}
 		input[type=checkbox] {
 			margin:0;
