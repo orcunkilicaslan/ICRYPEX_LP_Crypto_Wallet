@@ -881,6 +881,9 @@ footer{
 		@media screen and(max-width:$screenlg){
 			padding-bottom:40px;	
 		}
+		.owl-height{
+			height: auto !important;
+		}
 		.item{
 			background:#f2f5f6;
 			padding:0px 10px 0px;
