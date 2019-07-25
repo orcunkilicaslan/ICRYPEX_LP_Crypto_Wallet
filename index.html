@@ -29,65 +29,46 @@
 <section class="container-fluid form-wrapper">
 	<div class="container">
 		<!-- Alert -->
-		<div class="alert alert-big alert-sweet alert-sweet-small alert-success alert-dismissible fade show" role="alert">
-			<div class="alert-flex">
-				<div class="alert-icon">
-					<div class="alert-icon-success">
-						<div class="alert-icon-success-tip"></div>
-						<div class="alert-icon-success-long"></div>
-						<div class="alert-icon-success-placeholder"></div>
-						<div class="alert-icon-success-fix"></div>
-					</div>
-				</div>
-				<div class="alert-big-desc">
-					<h4 class="alert-heading">Well done!</h4>
-					<p>Aww yeah, you successfully read this important alert message.</p>
-				</div>
-			</div>
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
-		</div>
-		<div class="alert alert-big alert-sweet alert-sweet-small alert-warning alert-dismissible fade show" role="alert">
-			<div class="alert-flex">
-				<div class="alert-icon">
-					<div class="alert-icon-warning">
-						<div class="alert-icon-warning-body"></div>
-						<div class="alert-icon-warning-dot"></div>
-					</div>
-				</div>
-				<div class="alert-big-desc">
-					<h4 class="alert-heading">Warning!</h4>
-					<p>Aww yeah, you successfully read this important alert message.</p>
-				</div>
-			</div>
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
-		</div>
-		<div class="alert alert-big alert-sweet alert-sweet-small alert-danger alert-dismissible fade show" role="alert">
-			<div class="alert-flex">
-				<div class="alert-icon">
-					<div class="alert-icon-error">
-						<div class="alert-icon-error-x">
-							<div class="alert-icon-error-left"></div>
-							<div class="alert-icon-error-right"></div>
+		<div class="alertset">
+			<div class="alert alert-big alert-sweet alert-sweet-small alert-success alert-dismissible fade show" role="alert">
+				<div class="alert-flex">
+					<div class="alert-icon">
+						<div class="alert-icon-success">
+							<div class="alert-icon-success-tip"></div>
+							<div class="alert-icon-success-long"></div>
+							<div class="alert-icon-success-placeholder"></div>
+							<div class="alert-icon-success-fix"></div>
 						</div>
-						<div class="alert-icon-error-placeholder"></div>
-						<div class="alert-icon-error-fix"></div>
+					</div>
+					<div class="alert-big-desc">
+						<h4 class="alert-heading">Well done!</h4>
+						<p>Aww yeah, you successfully read this important alert message.</p>
 					</div>
 				</div>
-				<div class="alert-big-desc">
-					<h4 class="alert-heading">Oops...</h4>
-					<p>Aww yeah, you successfully read this important alert message.</p>
-				</div>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
+			<div class="alert alert-big alert-sweet alert-sweet-small alert-warning alert-dismissible fade show" role="alert">
+				<div class="alert-flex">
+					<div class="alert-icon">
+						<div class="alert-icon-warning">
+							<div class="alert-icon-warning-body"></div>
+							<div class="alert-icon-warning-dot"></div>
+						</div>
+					</div>
+					<div class="alert-big-desc">
+						<h4 class="alert-heading">Warning!</h4>
+						<p>Aww yeah, you successfully read this important alert message.</p>
+					</div>
+				</div>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
 		</div>
 		<!-- Alert -->
-		<form action="" onsubmit="" autocomplete="off" novalidate>
+		<form action="" autocomplete="off" onsubmit="return cf()" novalidate>
 		<h2 class="font-weight-normal">DİJİTAL PARA DÜNYASINDA <b>GERÇEK KRİPTO CÜZDANA</b> SAHİP OLUN!</h2>
 		<div class="d-flex inputs justify-content-center mt-2 mx-auto flex-column flex-lg-row">
 			<div id="iconFirstNameId" class="">
@@ -118,8 +99,8 @@
 			</div>
 			<div class="checkboxline ml-lg-4 ml-0 mt-2 mt-lg-0">
 				<div id="iconUseTermCheckId" class="squaredFour">
-					<input type="checkbox" value="None" id="termsOfUseCheck" name="check" />
-					<label for="termsOfUseCheck"><span><a href="https://www.icrypex.com/company/legal/terms" target="_blank"><u>Kullanım Sözleşmesini</u></a>&nbsp;okudum, onaylıyorum.</span></label>
+					<input type="checkbox" value="None" id="check1" name="check" />
+					<label id="labeltermsOfUseCheck" for="check1"><span><a href="https://www.icrypex.com/company/legal/terms" target="_blank"><u>Kullanım Sözleşmesini</u></a>&nbsp;okudum, onaylıyorum.</span></label>
 					<span class="inputerrormessage" id="msgUseTermCheckId"></span>
 				</div>
 			</div>
@@ -134,6 +115,91 @@
 		</form>
 	</div>
 </section>
+
+<script type="text/javascript">
+	function cf() {
+
+		// console.log("dropped");
+		var error			= false;
+		var emailPattern	= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+		var termsOfUseCheck	= document.getElementById('check1').checked;
+
+		document.getElementById('msgFirstNameId').innerText = "";
+		document.getElementById('msgLastNameId').innerText = "";
+		document.getElementById('msgPhoneId').innerText = "";
+		document.getElementById('msgEmailId').innerText = "";
+
+		// InputName
+		if (document.getElementById('inputFirstNameId').value.length < 2) {
+			document.getElementById('iconFirstNameId').classList.add("error");
+			document.getElementById('iconFirstNameId').classList.remove("check");
+			document.getElementById('msgFirstNameId').innerText = "EN AZ 2 KARAKTER";
+			error = true;
+		}else{
+			document.getElementById('iconFirstNameId').classList.add("check");
+			document.getElementById('iconFirstNameId').classList.remove("error");
+			document.getElementById('msgFirstNameId').innerText = "";
+			error = false;
+		}
+
+		// InputLastName
+		if (document.getElementById('inputLastNameId').value.length < 2) {
+			document.getElementById('iconLastNameId').classList.add("error");
+			document.getElementById('iconLastNameId').classList.remove("check");
+			document.getElementById('msgLastNameId').innerText = "EN AZ 2 KARAKTER";
+			error = true;
+		}else{
+			document.getElementById('iconLastNameId').classList.add("check");
+			document.getElementById('iconLastNameId').classList.remove("error");
+			document.getElementById('msgLastNameId').innerText = "";
+			error = false;
+		}
+
+		// InputPhone
+		if (document.getElementById('inputPhoneId').value.length < 14) {
+			document.getElementById('iconPhoneId').classList.add("error");
+			document.getElementById('iconPhoneId').classList.remove("check");
+			document.getElementById('msgPhoneId').innerText = "HATALI TELEFON";
+			error = true;
+		}else{
+			document.getElementById('iconPhoneId').classList.add("check");
+			document.getElementById('iconPhoneId').classList.remove("error");
+			document.getElementById('msgPhoneId').innerText = "";
+			error = false;
+		}
+
+		// InputMail
+		if (!emailPattern.test(document.getElementById('inputEmailId').value)) {
+			document.getElementById('iconEmailId').classList.add("error");
+			document.getElementById('iconEmailId').classList.remove("check");
+			document.getElementById('msgEmailId').innerText = "HATALI E-POSTA";
+			error = true;
+		}else{
+			document.getElementById('iconEmailId').classList.add("check");
+			document.getElementById('iconEmailId').classList.remove("error");
+			document.getElementById('msgEmailId').innerText = "";
+			error = false;
+		}
+
+		// CheckboxTermsOfUse
+		if (!termsOfUseCheck) {
+			document.getElementById('labeltermsOfUseCheck').classList.add("error");
+			document.getElementById('labeltermsOfUseCheck').classList.remove("check");
+			error = true;
+		}else {
+			document.getElementById('labeltermsOfUseCheck').classList.add("check");
+			document.getElementById('labeltermsOfUseCheck').classList.remove("error");
+			error = false;
+		}
+
+		if (!error) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+</script>
 
 <div class="wrapper">
 <section class="container-fluid crypto-analysis pt-7 pb-8">
