@@ -667,7 +667,7 @@ footer{
 				//display: none !important;
 			}
 			.inputerrormessage{
-				top: 12px !important;
+				top: 10px !important;
 			}
 		}
 	}
@@ -779,13 +779,14 @@ footer{
 		}
 		.inputerrormessage{
 			position: absolute;
-			top: 17px;
+			top: 15px;
 			right: 28px;
 			color: $red;
-			font-size: 13px;
+			font-size: 15px;
 			line-height: 1;
 			text-transform: uppercase;
 			z-index: 0;
+			font-weight: 500;
 		}
 	}
 	.btn{
