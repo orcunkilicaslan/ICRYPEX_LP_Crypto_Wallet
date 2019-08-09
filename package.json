@@ -41,7 +41,7 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "jquery.maskedinput": "^1.4.1"
+    "inputmask": "^4.0.8"
   },
   "browserslist": [
     "last 3 versions",
