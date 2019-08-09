@@ -1,7 +1,11 @@
 /* Input Mask */
-jQuery(function($){
-    $(".inputdatemask").mask("99/99/9999",{placeholder:"MM/DD/YYYY"});
-    $(".inputphonemask").mask("0599 999 99 99",{placeholder:"05__ ___ __ __"});
+$(document).ready(function(){
+    $('.inputphonemask').inputmask({
+        mask: '0599 999 99 99',
+        placeholder: '',
+        showMaskOnFocus: true,
+        showMaskOnHover: false
+    });
 });
 /* Input Mask */
 
