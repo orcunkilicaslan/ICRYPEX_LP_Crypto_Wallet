@@ -36,36 +36,7 @@ class LPRegisterForm {
 
     constructor(){}
 
-    sendLPRegisterForm(){
-        let FirstName = document.getElementById("inputFirstNameId").value;
-        let LastName = document.getElementById("inputLastNameId").value;
-        let Phone = document.getElementById("inputPhoneId").value;
-        let Email = document.getElementById("inputEmailId").value;
-        let termsOfUseCheck = document.getElementById("termsOfUseCheck").checked;
-
-        let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
-
-
-        if(FirstName.trim().length < 2){
-            this.setLPRegisterFormErrorMessages("msgFirstNameId", Translation.translate('tr','HomepageRegisterFirstNameAlert'));
-            this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
-        }
-        if(LastName.trim().length < 2){
-            this.setLPRegisterFormErrorMessages("msgLastNameId", Translation.translate('tr','HomepageRegisterLastNameAlert'));
-            this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
-        }
-        if(Phone.trim().length < 14){
-            this.setLPRegisterFormErrorMessages("msgPhoneId", Translation.translate('tr','HomepageRegisterPhoneAlert'));
-            this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
-        }
-        if(!emailPattern.test(Email)){
-            this.setLPRegisterFormErrorMessages("msgEmailId", Translation.translate('tr','HomepageRegisterEmailAlert'));
-            this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
-        }
-        if(!termsOfUseCheck){
-            document.getElementById('labeltermsOfUseCheck').classList.add("checkederror");
-        }
-    }
+    sendLPRegisterForm(){}
 
     setLPRegisterFormErrorMessages(inputIdSelector, inputErrorMessage){
         let ErrorMessageText = document.getElementById(inputIdSelector);
@@ -84,7 +55,7 @@ class LPRegisterForm {
 
         let phonePatternGsm = /^\(5\d{2}\)\s?\d{3}\s?\d{2}\s?\d{2}$/g; // GSM Phone Pattern
         let phonePatternAll = /^\(\d{3}\)\s?\d{3}\s?\d{2}\s?\d{2}$/g; // ALL Phone Pattern
-        let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+        let emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         let inputSelectorTag = document.getElementById(inputIdSelector);
         let messageSpanSelectorTag = document.getElementById(messageSpanSelector);
@@ -120,7 +91,7 @@ class LPRegisterForm {
                 break;
 
             case "inputPhoneProcess":
-                if(val.length < 14){
+                if(val.replace(/\s/g, "").length < 11){
                     this.setLPRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','LPRegisterPhoneAlert'));
                     this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
                     this.setLPRegisterFormErrorInput(inputIdSelector);
