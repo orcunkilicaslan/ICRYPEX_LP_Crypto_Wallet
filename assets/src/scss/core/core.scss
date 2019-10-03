@@ -380,7 +380,7 @@ footer{
 	}
 	.banks{
 		.middle{
-			width:410px;
+			width:510px;
 			margin:auto;
 			position:relative;
 			@media screen and(max-width:$screenxs){
@@ -409,14 +409,17 @@ footer{
 					display:block;
 				}
 				@media screen and(max-width:$screenxs){
-	    			&:before{
-	    				display:none;
-	    			}
+
+					margin: 8px 10px;
+
+					&:before{
+						display:none;
+					}
 					&:nth-child(3){
 						margin-top:5px;
 						margin-left:0;
 					}
-					&:nth-child(4){
+					&:nth-child(5){
 						margin-top: 5px;
 					}
 				}
@@ -447,6 +450,11 @@ footer{
 					}
 				}
 				&:nth-child(4){
+					img{
+						margin-top:-8px;
+					}
+				}
+				&:nth-child(5){
 					img{
 						margin-top:5px;
 					}
