@@ -15,169 +15,169 @@
 <body>
 
 <header class="container-fluid d-flex justify-content-center"></header>
-<section class="banner-wrapper">
-	<div class="container-fluid banner" style="background-image: url(assets/img/banner/bg-io.jpg)">
-		<div class="container h-100 flex-column d-flex justify-content-center align-items-center">
+<section class="banner-wrapper" style="position: static;">
+	<div class="container-fluid banner" style="background-image: url(assets/img/banner/bg-io.jpg);  height: calc(100vh - 230px);">
+		<div class="container h-100 flex-column d-flex justify-content-center align-items-center" style="padding-bottom: 200px; padding-top: 200px;">
 			<h1 class="eff fadeInUp2" style="color: black; font-weight: 700;" data-wow-duration=".6s" data-wow-delay=".1s">VADELİ YATIRIMI MI GAYRİMENKUL YATIRIMI MI?</h1>
 			<h2 class="eff fadeInUp2" style="color: black; font-weight: 500;" data-wow-duration=".6s" data-wow-delay=".25s">Yatırım yapmak istiyorsunuz fakat vadeli yatırım ve gayrimenkul yatırımı arasında kararsız mısınız?</h2>
 			<h2 class="eff fadeInUp2" style="color: black; font-weight: 500;" data-wow-duration=".6s" data-wow-delay=".25s">Uzman danışmanlarla yatırım eğitimi alın, kararlarınıza yön verin</h2>
 		</div>
 	</div>
 </section>
-<section class="container-fluid form-wrapper" style="background-color: black">
-	<div class="container">
 
-		<form action="" autocomplete="off" onsubmit="return submitValidForm()" novalidate>
-			<h2 class="font-weight-normal">DAHA FAZLA BİLGİ İÇİN FORMU DOLDURUN VE <b>ÜCRETSİZ EĞİTİM VE YATIRIM DANIŞMANLIĞI</b> ALIN!</h2>
-		<div class="d-flex inputs justify-content-center mt-2 mx-auto flex-column flex-lg-row">
-			<div id="iconFirstNameId" class="">
-				<input type="text" class="form-control" placeholder="İSİM" name="firstname" id="inputFirstNameId" required onkeyup="lpregisterform.verifyContent('inputFirstNameProcess','inputFirstNameId','msgFirstNameId','iconFirstNameId')" onfocusout="lpregisterform.verifyContentErrorDelete('inputFirstNameProcess','inputFirstNameId','msgFirstNameId','iconFirstNameId')">
-				<span class="inputerrormessage" id="msgFirstNameId"></span>
-			</div>
-			<div id="iconLastNameId" class="">
-				<input type="text" class="form-control" placeholder="SOYİSİM" name="lastname" id="inputLastNameId" required onkeyup="lpregisterform.verifyContent('inputLastNameProcess','inputLastNameId','msgLastNameId','iconLastNameId')" onfocusout="lpregisterform.verifyContentErrorDelete('inputLastNameProcess','inputLastNameId','msgLastNameId','iconLastNameId')">
-				<span class="inputerrormessage" id="msgLastNameId"></span>
-			</div>
-			<div id="iconPhoneId" class="">
-				<input type="text" class="form-control inputphonemask" placeholder="TELEFON" name="phone" id="inputPhoneId" required onkeyup="lpregisterform.verifyContent('inputPhoneProcess','inputPhoneId','msgPhoneId','iconPhoneId')" onfocusout="lpregisterform.verifyContentErrorDelete('inputPhoneProcess','inputPhoneId','msgPhoneId','iconPhoneId')">
-				<span class="inputerrormessage" id="msgPhoneId"></span>
-			</div>
-			<div id="iconEmailId" class="">
-				<input type="text" class="form-control" placeholder="E-POSTA" name="email" id="inputEmailId" required onkeyup="lpregisterform.verifyContent('inputEmailProcess','inputEmailId','msgEmailId','iconEmailId')" onfocusout="lpregisterform.verifyContentErrorDelete('inputEmailProcess','inputEmailId','msgEmailId','iconEmailId')">
-				<span class="inputerrormessage" id="msgEmailId"></span>
-			</div>
-		</div>
-		<div class="d-lg-none d-flex justify-content-center mt-2 ml-0 checkbox-wrapper flex-column flex-lg-row">
-			<div class="checkboxline">
-				<div class="recaptcha-area d-flex">
-					<div class="recaptcha-check">
-						<div class="g-recaptcha" data-theme="dark" data-sitekey="6LewOKAUAAAAAMDO2yohWeyDcjFAHfcuEqK2mIp4"></div>
+
+<div class="wrapper">
+<section class="container-fluid form-wrapper" style="background-color: black; position: static; padding: 40px 0 0;">
+		<div class="container">
+
+			<form action="" autocomplete="off" onsubmit="return submitValidForm()" novalidate>
+				<h2 class="font-weight-normal">DAHA FAZLA BİLGİ İÇİN FORMU DOLDURUN VE <b>ÜCRETSİZ EĞİTİM VE YATIRIM DANIŞMANLIĞI</b> ALIN!</h2>
+				<div class="d-flex inputs justify-content-center mt-2 mx-auto flex-column flex-lg-row">
+					<div id="iconFirstNameId" class="">
+						<input type="text" class="form-control" placeholder="İSİM" name="firstname" id="inputFirstNameId" required onkeyup="lpregisterform.verifyContent('inputFirstNameProcess','inputFirstNameId','msgFirstNameId','iconFirstNameId')" onfocusout="lpregisterform.verifyContentErrorDelete('inputFirstNameProcess','inputFirstNameId','msgFirstNameId','iconFirstNameId')">
+						<span class="inputerrormessage" id="msgFirstNameId"></span>
 					</div>
-					<span>Ben rabot değilim</span>
+					<div id="iconLastNameId" class="">
+						<input type="text" class="form-control" placeholder="SOYİSİM" name="lastname" id="inputLastNameId" required onkeyup="lpregisterform.verifyContent('inputLastNameProcess','inputLastNameId','msgLastNameId','iconLastNameId')" onfocusout="lpregisterform.verifyContentErrorDelete('inputLastNameProcess','inputLastNameId','msgLastNameId','iconLastNameId')">
+						<span class="inputerrormessage" id="msgLastNameId"></span>
+					</div>
+					<div id="iconPhoneId" class="">
+						<input type="text" class="form-control inputphonemask" placeholder="TELEFON" name="phone" id="inputPhoneId" required onkeyup="lpregisterform.verifyContent('inputPhoneProcess','inputPhoneId','msgPhoneId','iconPhoneId')" onfocusout="lpregisterform.verifyContentErrorDelete('inputPhoneProcess','inputPhoneId','msgPhoneId','iconPhoneId')">
+						<span class="inputerrormessage" id="msgPhoneId"></span>
+					</div>
+					<div id="iconEmailId" class="">
+						<input type="text" class="form-control" placeholder="E-POSTA" name="email" id="inputEmailId" required onkeyup="lpregisterform.verifyContent('inputEmailProcess','inputEmailId','msgEmailId','iconEmailId')" onfocusout="lpregisterform.verifyContentErrorDelete('inputEmailProcess','inputEmailId','msgEmailId','iconEmailId')">
+						<span class="inputerrormessage" id="msgEmailId"></span>
+					</div>
 				</div>
-			</div>
-			<div class="checkboxline ml-lg-4 ml-0 mt-2 mt-lg-0">
-				<div id="iconUseTermCheckId" class="squaredFour">
-					<input type="checkbox" value="None" id="check1" name="check" />
-					<label id="labeltermsOfUseCheck" for="check1"><span><a href="https://www.icrypex.com/company/legal/terms" target="_blank"><u>Kullanım Sözleşmesini</u></a>&nbsp;okudum, onaylıyorum.</span></label>
-					<span class="inputerrormessage" id="msgUseTermCheckId"></span>
+				<div class="d-lg-none d-flex justify-content-center mt-2 ml-0 checkbox-wrapper flex-column flex-lg-row">
+					<div class="checkboxline">
+						<div class="recaptcha-area d-flex">
+							<div class="recaptcha-check">
+								<div class="g-recaptcha" data-theme="dark" data-sitekey="6LewOKAUAAAAAMDO2yohWeyDcjFAHfcuEqK2mIp4"></div>
+							</div>
+							<span>Ben rabot değilim</span>
+						</div>
+					</div>
+					<div class="checkboxline ml-lg-4 ml-0 mt-2 mt-lg-0">
+						<div id="iconUseTermCheckId" class="squaredFour">
+							<input type="checkbox" value="None" id="check1" name="check" />
+							<label id="labeltermsOfUseCheck" for="check1"><span><a href="https://www.icrypex.com/company/legal/terms" target="_blank"><u>Kullanım Sözleşmesini</u></a>&nbsp;okudum, onaylıyorum.</span></label>
+							<span class="inputerrormessage" id="msgUseTermCheckId"></span>
+						</div>
+					</div>
+					<div class="checkboxline ml-lg-4 ml-0 mt-2 mt-lg-0">
+						<div class="squaredFour">
+							<input type="checkbox" value="None" id="check2" name="check" />
+							<label for="check2"><span>Gelişmelerden ve duyurulardan haberdar olmak istiyorum.</span></label>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="checkboxline ml-lg-4 ml-0 mt-2 mt-lg-0">
-				<div class="squaredFour">
-					<input type="checkbox" value="None" id="check2" name="check" />
-					<label for="check2"><span>Gelişmelerden ve duyurulardan haberdar olmak istiyorum.</span></label>
-				</div>
-			</div>
+				<button type="submit" class="btn btn-danger" style="width: 400px;">ÜCRETSİZ EĞİTİM VE YATIRIM DANIŞMANLIĞI ALIN</button>
+			</form>
 		</div>
-		<button type="submit" class="btn btn-danger" style="width: 400px;">ÜCRETSİZ EĞİTİM VE YATIRIM DANIŞMANLIĞI ALIN</button>
-		</form>
-	</div>
-</section>
+	</section>
 
 <script type="text/javascript">
 
-	function verifyValidFirstName() {
-		if(document.getElementById('inputFirstNameId').value.length < 2){
-			document.getElementById('iconFirstNameId').classList.add("error");
-			document.getElementById('iconFirstNameId').classList.remove("check");
-			document.getElementById('msgFirstNameId').innerText = "EN AZ 2 KARAKTER";
+		function verifyValidFirstName() {
+			if(document.getElementById('inputFirstNameId').value.length < 2){
+				document.getElementById('iconFirstNameId').classList.add("error");
+				document.getElementById('iconFirstNameId').classList.remove("check");
+				document.getElementById('msgFirstNameId').innerText = "EN AZ 2 KARAKTER";
 
-			return false;
-		} else {
-			document.getElementById('iconFirstNameId').classList.add("check");
-			document.getElementById('iconFirstNameId').classList.remove("error");
-			document.getElementById('msgFirstNameId').innerText = "";
+				return false;
+			} else {
+				document.getElementById('iconFirstNameId').classList.add("check");
+				document.getElementById('iconFirstNameId').classList.remove("error");
+				document.getElementById('msgFirstNameId').innerText = "";
 
+				return true;
+			}
 			return true;
 		}
-		return true;
-	}
 
-	function verifyValidLastName() {
-		if(document.getElementById('inputLastNameId').value.length < 2){
-			document.getElementById('iconLastNameId').classList.add("error");
-			document.getElementById('iconLastNameId').classList.remove("check");
-			document.getElementById('msgLastNameId').innerText = "EN AZ 2 KARAKTER";
+		function verifyValidLastName() {
+			if(document.getElementById('inputLastNameId').value.length < 2){
+				document.getElementById('iconLastNameId').classList.add("error");
+				document.getElementById('iconLastNameId').classList.remove("check");
+				document.getElementById('msgLastNameId').innerText = "EN AZ 2 KARAKTER";
 
-			return false;
-		} else {
-			document.getElementById('iconLastNameId').classList.add("check");
-			document.getElementById('iconLastNameId').classList.remove("error");
-			document.getElementById('msgLastNameId').innerText = "";
+				return false;
+			} else {
+				document.getElementById('iconLastNameId').classList.add("check");
+				document.getElementById('iconLastNameId').classList.remove("error");
+				document.getElementById('msgLastNameId').innerText = "";
 
+				return true;
+			}
 			return true;
 		}
-		return true;
-	}
 
-	function verifyValidPhone() {
-		if(document.getElementById('inputPhoneId').value.replace(/\s/g, "").length < 11){
-			document.getElementById('iconPhoneId').classList.add("error");
-			document.getElementById('iconPhoneId').classList.remove("check");
-			document.getElementById('msgPhoneId').innerText = "HATALI TELEFON";
+		function verifyValidPhone() {
+			if(document.getElementById('inputPhoneId').value.replace(/\s/g, "").length < 11){
+				document.getElementById('iconPhoneId').classList.add("error");
+				document.getElementById('iconPhoneId').classList.remove("check");
+				document.getElementById('msgPhoneId').innerText = "HATALI TELEFON";
 
-			return false;
-		} else {
-			document.getElementById('iconPhoneId').classList.add("check");
-			document.getElementById('iconPhoneId').classList.remove("error");
-			document.getElementById('msgPhoneId').innerText = "";
+				return false;
+			} else {
+				document.getElementById('iconPhoneId').classList.add("check");
+				document.getElementById('iconPhoneId').classList.remove("error");
+				document.getElementById('msgPhoneId').innerText = "";
 
+				return true;
+			}
 			return true;
 		}
-		return true;
-	}
 
-	function verifyValidEmail() {
-		var emailPattern	= /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		function verifyValidEmail() {
+			var emailPattern	= /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-		if(!document.getElementById('inputEmailId').value.match(emailPattern)){
-			document.getElementById('iconEmailId').classList.add("error");
-			document.getElementById('iconEmailId').classList.remove("check");
-			document.getElementById('msgEmailId').innerText = "HATALI E-POSTA";
+			if(!document.getElementById('inputEmailId').value.match(emailPattern)){
+				document.getElementById('iconEmailId').classList.add("error");
+				document.getElementById('iconEmailId').classList.remove("check");
+				document.getElementById('msgEmailId').innerText = "HATALI E-POSTA";
 
-			return false;
-		} else {
-			document.getElementById('iconEmailId').classList.add("check");
-			document.getElementById('iconEmailId').classList.remove("error");
-			document.getElementById('msgEmailId').innerText = "";
+				return false;
+			} else {
+				document.getElementById('iconEmailId').classList.add("check");
+				document.getElementById('iconEmailId').classList.remove("error");
+				document.getElementById('msgEmailId').innerText = "";
 
+				return true;
+			}
 			return true;
 		}
-		return true;
-	}
 
-	function verifyValidTermsOfUse() {
-		var termsOfUseCheck	= document.getElementById('check1').checked;
+		function verifyValidTermsOfUse() {
+			var termsOfUseCheck	= document.getElementById('check1').checked;
 
-		if(!termsOfUseCheck){
-			document.getElementById('labeltermsOfUseCheck').classList.add("error");
-			document.getElementById('labeltermsOfUseCheck').classList.remove("check");
+			if(!termsOfUseCheck){
+				document.getElementById('labeltermsOfUseCheck').classList.add("error");
+				document.getElementById('labeltermsOfUseCheck').classList.remove("check");
 
-			return false;
-		} else {
-			document.getElementById('labeltermsOfUseCheck').classList.add("check");
-			document.getElementById('labeltermsOfUseCheck').classList.remove("error");
+				return false;
+			} else {
+				document.getElementById('labeltermsOfUseCheck').classList.add("check");
+				document.getElementById('labeltermsOfUseCheck').classList.remove("error");
 
+				return true;
+			}
 			return true;
 		}
-		return true;
-	}
 
 
-	function submitValidForm() {
-		if (!verifyValidFirstName() || !verifyValidLastName() || !verifyValidPhone() || !verifyValidEmail() || !verifyValidTermsOfUse()){
-			console.log("HATA");
-			return false;
-		} else {
-			console.log("DOGRU");
+		function submitValidForm() {
+			if (!verifyValidFirstName() || !verifyValidLastName() || !verifyValidPhone() || !verifyValidEmail() || !verifyValidTermsOfUse()){
+				console.log("HATA");
+				return false;
+			} else {
+				console.log("DOGRU");
+			}
 		}
-	}
 
-</script>
-
-<div class="wrapper">
-<section class="container-fluid crypto-analysis"></section>
+	</script>
 
 <section class="container-fluid why-icrypex pt-7 pb-0">
 	<div class="container">
