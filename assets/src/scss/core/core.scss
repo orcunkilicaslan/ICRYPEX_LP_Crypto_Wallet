@@ -475,20 +475,21 @@ footer{
 			border-radius:29px;
 			background: rgba(6,81,140,.4);
 			@include flexbox();
-		    @include justify-content(center);
-		    @include align-items(center);
-		    @include transition(.4s);
-		    margin-left:15px;
-		    position:relative;
-		    &:first-child{
-		    	margin-left:0;
-		    }
-		    &:hover{
-		    	background: #06518c;
-		    }
+			@include justify-content(center);
+			@include align-items(center);
+			@include transition(.4s);
+			margin-left:5px;
+			position:relative;
+			&:first-child{
+				margin-left:0;
+			}
+			&:hover{
+				background: #06518c;
+			}
 			&:before{
 				content:"";
 				display:block;
+				position: relative;
 			}
 			&.fc{
 				&:before{
@@ -516,6 +517,21 @@ footer{
 					width:15px;
 					height:15px;
 					background:url(#{$mainImgPath}/icons/Instagram_Logo.svg) no-repeat;
+				}
+			}
+			&.mdm{
+				&:before{
+					width: 14px;
+					height: 11px;
+					background:url(#{$mainImgPath}/icons/Medium_Logo.svg) no-repeat;
+				}
+			}
+			&.tlgrm{
+				&:before{
+					width:16px;
+					height:13px;
+					background:url(#{$mainImgPath}/icons/Telegram_Logo.svg) no-repeat;
+					left: -2px;
 				}
 			}
 		}
