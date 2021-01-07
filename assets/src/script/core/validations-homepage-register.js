@@ -91,7 +91,10 @@ class LPRegisterForm {
                 break;
 
             case "inputPhoneProcess":
-                if(val.replace(/\s/g, "").length < 11){
+
+                var selectCountryCodeVal =  document.getElementsByClassName('jsCountryCode')[0].value == "90" ? 10 : 6;
+
+                if(val.replace(/\s/g, "").length < selectCountryCodeVal){
                     this.setLPRegisterFormErrorMessages(messageSpanSelector, Translation.translate('tr','LPRegisterPhoneAlert'));
                     this.setLPRegisterFormErrorIcon(messageIconSelector,"error", "check");
                     this.setLPRegisterFormErrorInput(inputIdSelector);
